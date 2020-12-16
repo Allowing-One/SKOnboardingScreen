@@ -112,29 +112,29 @@ class SKOnboardingScreenState extends State<SKOnboardingScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: _buildPageIndicator(),
                   ),
-                  _currentPage != widget.pages.length - 1
-                      ? Expanded(
-                          child: Align(
-                            alignment: FractionalOffset.bottomRight,
-                            child: Padding(
-                              padding: EdgeInsets.only(right: 20, bottom: 10),
-                              child: FloatingActionButton(
-                                backgroundColor: widget.bgColor,
-                                child: Icon(
-                                  Icons.arrow_forward,
-                                  color: widget.themeColor,
-                                ),
-                                onPressed: () {
-                                  _pageController.nextPage(
-                                    duration: Duration(milliseconds: 500),
-                                    curve: Curves.ease,
-                                  );
-                                },
-                              ),
-                            ),
-                          ),
-                        )
-                      : Text(''),
+                  // _currentPage != widget.pages.length - 1
+                  //     ? Expanded(
+                  //         child: Align(
+                  //           alignment: FractionalOffset.bottomRight,
+                  //           child: Padding(
+                  //             padding: EdgeInsets.only(right: 20, bottom: 10),
+                  //             child: FloatingActionButton(
+                  //               backgroundColor: widget.bgColor,
+                  //               child: Icon(
+                  //                 Icons.arrow_forward,
+                  //                 color: widget.themeColor,
+                  //               ),
+                  //               onPressed: () {
+                  //                 _pageController.nextPage(
+                  //                   duration: Duration(milliseconds: 500),
+                  //                   curve: Curves.ease,
+                  //                 );
+                  //               },
+                  //             ),
+                  //           ),
+                  //         ),
+                  //       )
+                  //     : Text(''),
                 ],
               ),
             ),
