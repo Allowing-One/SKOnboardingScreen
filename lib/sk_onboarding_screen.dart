@@ -56,7 +56,8 @@ class SKOnboardingScreenState extends State<SKOnboardingScreen> {
       duration: Duration(milliseconds: 150),
       margin: EdgeInsets.symmetric(horizontal: 8.0),
       height: 8.0,
-      width: isActive ? 24.0 : 16.0,
+      width: 8.0,
+      // width: isActive ? 24.0 : 16.0,
       decoration: BoxDecoration(
         color: isActive ? widget.themeColor : Color(0xFF929794),
         borderRadius: BorderRadius.all(Radius.circular(12)),
