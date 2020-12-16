@@ -86,7 +86,7 @@ class SKOnboardingScreenState extends State<SKOnboardingScreen> {
                         widget.skipClicked("Skip Tapped");
                       },
                       child: Text(
-                        'Skip',
+                        'skkkkkkkkpu',
                         style: TextStyle(
                           fontWeight: FontWeight.w500,
                           color: Colors.black,
