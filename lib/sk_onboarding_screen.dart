@@ -57,7 +57,6 @@ class SKOnboardingScreenState extends State<SKOnboardingScreen> {
       margin: EdgeInsets.symmetric(horizontal: 8.0),
       height: 8.0,
       width: 8.0,
-      // width: isActive ? 24.0 : 16.0,
       decoration: BoxDecoration(
         color: isActive ? widget.themeColor : Color(0xFF929794),
         borderRadius: BorderRadius.all(Radius.circular(12)),
@@ -86,7 +85,7 @@ class SKOnboardingScreenState extends State<SKOnboardingScreen> {
                         widget.skipClicked("Skip Tapped");
                       },
                       child: Text(
-                        'skkkkkkkkpu',
+                        'Skip',
                         style: TextStyle(
                           fontWeight: FontWeight.w500,
                           color: Colors.black,
@@ -112,29 +111,29 @@ class SKOnboardingScreenState extends State<SKOnboardingScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: _buildPageIndicator(),
                   ),
-                  // _currentPage != widget.pages.length - 1
-                  //     ? Expanded(
-                  //         child: Align(
-                  //           alignment: FractionalOffset.bottomRight,
-                  //           child: Padding(
-                  //             padding: EdgeInsets.only(right: 20, bottom: 10),
-                  //             child: FloatingActionButton(
-                  //               backgroundColor: widget.bgColor,
-                  //               child: Icon(
-                  //                 Icons.arrow_forward,
-                  //                 color: widget.themeColor,
-                  //               ),
-                  //               onPressed: () {
-                  //                 _pageController.nextPage(
-                  //                   duration: Duration(milliseconds: 500),
-                  //                   curve: Curves.ease,
-                  //                 );
-                  //               },
-                  //             ),
-                  //           ),
-                  //         ),
-                  //       )
-                  //     : Text(''),
+//                  _currentPage != widget.pages.length - 1
+//                      ? Expanded(
+//                          child: Align(
+//                            alignment: FractionalOffset.bottomRight,
+//                            child: Padding(
+//                              padding: EdgeInsets.only(right: 20, bottom: 10),
+//                              child: FloatingActionButton(
+//                                backgroundColor: widget.bgColor,
+//                                child: Icon(
+//                                  Icons.arrow_forward,
+//                                  color: widget.themeColor,
+//                                ),
+//                                onPressed: () {
+//                                  _pageController.nextPage(
+//                                    duration: Duration(milliseconds: 500),
+//                                    curve: Curves.ease,
+//                                  );
+//                                },
+//                              ),
+//                            ),
+//                          ),
+//                        )
+//                      : Text(''),
                 ],
               ),
             ),
@@ -164,10 +163,9 @@ class SKOnboardingScreenState extends State<SKOnboardingScreen> {
           Text(
             page.title,
             style: TextStyle(
-              fontWeight: FontWeight.w700,
-              color: page.titleColor,
-              fontSize: 20,
-            ),
+                fontWeight: FontWeight.w700,
+                color: page.titleColor,
+                fontSize: page.title.length > 24 ? 17 : 20),
           ),
           SizedBox(height: 15.0),
           Text(
@@ -195,7 +193,7 @@ class SKOnboardingScreenState extends State<SKOnboardingScreen> {
           child: new Text(
             'Get Started',
             style: new TextStyle(
-                color: Colors.white,
+                color: Colors.black,
                 fontSize: 20.0,
                 fontWeight: FontWeight.w500),
           ),
